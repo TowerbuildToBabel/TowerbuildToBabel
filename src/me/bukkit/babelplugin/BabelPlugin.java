@@ -83,9 +83,9 @@ public class BabelPlugin extends JavaPlugin {
         File file = new File(filepath);
 
         if (file.exists()) {
-            log.info("[BabelPlugin] Config.yml exitsts!");
+            log.info("[BabelPlugin] Config.yml exists!");
         } else {
-            log.info("[BabelPlugin] Config.yml does not exitst!");
+            log.info("[BabelPlugin] Config.yml does not exists!");
             io.createConfig();
         }
 

@@ -1,0 +1,5 @@
+apply plugin: 'java'
+apply plugin: 'eclipse'
+apply plugin: 'idea'
+archivesBaseName = 'babelplugin'
+version = '0.0.1-SNAPSHOT'

@@ -1,5 +1,11 @@
-apply plugin: 'java'
-apply plugin: 'eclipse'
-apply plugin: 'idea'
-archivesBaseName = 'babelplugin'
-version = '0.0.1-SNAPSHOT'
+repositories {
+    mavenCentral()
+    maven {
+        name 'Sponge maven repo'
+        url 'http://repo.spongepowered.org/Sponge/maven'
+    }
+}
+
+dependencies {
+    compile "org.spongepowered:spongeapi:1.0"
+}

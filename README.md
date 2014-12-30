@@ -9,4 +9,4 @@ Project Credits:
 * ThunderGemios10 (Maintainer)
 
 
-*Copyright 2015 © oSLiD3Ro, All rights reserved
+*Copyright 2015 © oSLiD3Ro

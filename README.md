@@ -5,5 +5,8 @@ Towerbuild to Babel [![Build Status](https://travis-ci.org/TowerbuildToBabel/Tow
 
 Project Credits:
 ============
-* oSLiD3Ro (Project Lead)
+* oSLiD3Ro (Project Lead, Lead Developer)
 * ThunderGemios10 (Maintainer)
+
+
+*Copyright 2015 © oSLiD3Ro, All rights reserved

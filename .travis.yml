@@ -1,6 +1,4 @@
 language: java
-mvn test
-mvn install -DskipTests=true
 notifications:
   email: false
 install: true

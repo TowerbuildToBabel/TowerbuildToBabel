@@ -1,7 +1,7 @@
-package me.bukkit.babelplugin.commands;
+package me.thundergemios10.babelplugin.commands;
 
-import me.bukkit.babelplugin.BabelPlugin;
-import me.bukkit.babelplugin.Functions;
+import me.thundergemios10.babelplugin.BabelPlugin;
+import me.thundergemios10.babelplugin.Functions;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.GameMode;

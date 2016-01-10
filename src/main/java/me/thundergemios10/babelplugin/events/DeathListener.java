@@ -1,4 +1,4 @@
-package me.bukkit.babelplugin.events;
+package me.thundergemios10.babelplugin.events;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -1,7 +1,7 @@
-package me.bukkit.babelplugin.events;
+package me.thundergemios10.babelplugin.events;
 
-import me.bukkit.babelplugin.BabelPlugin;
-import me.bukkit.babelplugin.Functions;
+import me.thundergemios10.babelplugin.BabelPlugin;
+import me.thundergemios10.babelplugin.Functions;
 import java.util.List;
 import org.bukkit.Material;
 import org.bukkit.block.Block;

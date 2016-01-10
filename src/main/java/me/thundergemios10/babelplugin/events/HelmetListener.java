@@ -1,4 +1,4 @@
-package me.bukkit.babelplugin.events;
+package me.thundergemios10.babelplugin.events;
 
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;

@@ -1,4 +1,4 @@
-package me.bukkit.babelplugin;
+package me.thundergemios10.babelplugin;
 
 import java.io.File;
 import java.io.IOException;

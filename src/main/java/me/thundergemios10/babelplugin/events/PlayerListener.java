@@ -56,7 +56,7 @@ public class PlayerListener
         {
           Boolean test = Boolean.valueOf(false);
           for (int i = 0; i < plugin.playerblue.size(); i++) {
-            if (ev.getPlayer().getName().equalsIgnoreCase(((Player)plugin.playerblues.get(i)).getName()))
+            if (ev.getPlayer().getName().equalsIgnoreCase(plugin.playerblues.get(i).getName()))
             {
               ev.getPlayer().teleport(plugin.spawnblue);
               ev.getPlayer().getWorld().setPVP(true);
@@ -64,7 +64,7 @@ public class PlayerListener
             }
           }
           for (i = 0; i < plugin.playerred.size(); i++) {
-            if (ev.getPlayer().getName().equalsIgnoreCase(((Player)plugin.playerreds.get(i)).getName()))
+            if (ev.getPlayer().getName().equalsIgnoreCase(plugin.playerblues.get(i).getName()))
             {
               ev.getPlayer().teleport(plugin.spawnred);
               ev.getPlayer().getWorld().setPVP(true);

@@ -1,6 +1,6 @@
 package config;
 
-import me.bukkit.babelplugin.BabelPlugin;
+import me.thundergemios10.babelplugin.BabelPlugin;
 import org.bukkit.ChatColor;
 import org.bukkit.Location;
 import org.bukkit.configuration.file.FileConfiguration;

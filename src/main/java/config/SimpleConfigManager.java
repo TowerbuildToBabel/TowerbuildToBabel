@@ -14,6 +14,7 @@ import java.nio.charset.Charset;
 import org.bukkit.plugin.PluginDescriptionFile;
 import org.bukkit.plugin.java.JavaPlugin;
 
+@SuppressWarnings("unused")
 public class SimpleConfigManager
 {
   private JavaPlugin plugin;
@@ -50,8 +51,7 @@ public class SimpleConfigManager
     File configFile;
     if (file.contains("/"))
     {
-      File configFile;
-      if (file.startsWith("/")) {
+    if (file.startsWith("/")) {
         configFile = new File(this.plugin.getDataFolder() + file.replace("/", File.separator));
       } else {
         configFile = new File(this.plugin.getDataFolder() + File.separator + file.replace("/", File.separator));
@@ -61,7 +61,7 @@ public class SimpleConfigManager
     {
       configFile = new File(this.plugin.getDataFolder(), file);
     }
-    return configFile;
+	return configFile;
   }
   
   public void prepareFile(String filePath, String resource)

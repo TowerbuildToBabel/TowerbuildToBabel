@@ -58,13 +58,9 @@ public class BabelPlugin extends JavaPlugin {
     public Location redbutton;
     public Location bluebutton;
     public String status = "join";
-    private static BabelPlugin instance = new BabelPlugin();
+    private static BabelPlugin instance;
     ConfigIO io = new ConfigIO(this);
-
-    public BabelPlugin() {
-        instance = this;
-    }
-
+    
     public static final BabelPlugin getPlugin() {
         return instance;
     }
@@ -77,6 +73,7 @@ public class BabelPlugin extends JavaPlugin {
 
     @Override
     public void onEnable() {
+        instance = this;
         log.info("[BabelPlugin] Plugin Version " + this.getDescription().getVersion() + " by oSLiD3Ro enabled!");
 
         String filepath = (System.getProperty("user.dir") + "\\plugins\\BabelPlugin\\config.yml");

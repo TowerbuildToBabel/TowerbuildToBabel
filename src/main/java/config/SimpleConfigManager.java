@@ -14,12 +14,14 @@ import java.nio.charset.Charset;
 import org.bukkit.plugin.PluginDescriptionFile;
 import org.bukkit.plugin.java.JavaPlugin;
 
+import me.thundergemios10.babelplugin.BabelPlugin;
+
 @SuppressWarnings("unused")
 public class SimpleConfigManager
 {
-  private JavaPlugin plugin;
+  private BabelPlugin plugin;
   
-  public SimpleConfigManager(JavaPlugin plugin)
+  public SimpleConfigManager(BabelPlugin plugin)
   {
     this.plugin = plugin;
   }
@@ -299,4 +301,3 @@ public class SimpleConfigManager
     }
   }
 }
-

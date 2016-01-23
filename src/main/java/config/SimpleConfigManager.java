@@ -45,7 +45,7 @@ public class SimpleConfigManager
   
   private File getConfigFile(String file)
   {
-    if ((file.isEmpty()) || (file == null)) {
+    if (file == null || file.isEmpty()) {
       return null;
     }
     File configFile;

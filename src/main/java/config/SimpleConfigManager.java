@@ -12,14 +12,13 @@ import java.io.InputStream;
 import java.io.OutputStream;
 import java.nio.charset.Charset;
 import org.bukkit.plugin.PluginDescriptionFile;
-import org.bukkit.plugin.java.JavaPlugin;
 
 import me.thundergemios10.babelplugin.BabelPlugin;
 
 @SuppressWarnings("unused")
 public class SimpleConfigManager
 {
-  private final Announcer plugin;
+  private final BabelPlugin plugin;
   
   public SimpleConfigManager(BabelPlugin plugin)
   {

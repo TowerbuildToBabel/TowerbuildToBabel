@@ -125,7 +125,7 @@ public class SimpleConfig
   public void set(String path, Object value, String[] comment)
   {
     for (String comm : comment) {
-      if (!this.config.contains(path))
+      if (!this.config.contains(path));
       {
         this.config.set(this.manager.getPluginName() + "_COMMENT_" + this.comments, " " + comm);
         this.comments += 1;

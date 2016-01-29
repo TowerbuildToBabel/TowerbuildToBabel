@@ -18,7 +18,7 @@ public class SimpleConfig
   private File file;
   private FileConfiguration config;
   
-  public SimpleConfig(InputStream configStream, File configFile, int comments, plugin);
+  public SimpleConfig(InputStream configStream, File configFile, int comments, BabelPlugin plugin);
   {
     this.comments = comments;
     this.manager = new SimpleConfigManager(plugin);

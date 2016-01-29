@@ -7,16 +7,18 @@ import java.util.Set;
 import org.bukkit.configuration.ConfigurationSection;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.configuration.file.YamlConfiguration;
-import org.bukkit.plugin.java.JavaPlugin;
+
+import me.thundergemios10.babelplugin.BabelPlugin;
 
 public class SimpleConfig
 {
   private int comments;
+  private BabelPlugin plugin
   private SimpleConfigManager manager;
   private File file;
   private FileConfiguration config;
   
-  public SimpleConfig(InputStream configStream, File configFile, int comments, JavaPlugin plugin)
+  public SimpleConfig(InputStream configStream, File configFile, int comments, plugin)
   {
     this.comments = comments;
     this.manager = new SimpleConfigManager(plugin);

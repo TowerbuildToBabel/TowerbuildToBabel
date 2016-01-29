@@ -19,7 +19,7 @@ import me.thundergemios10.babelplugin.BabelPlugin;
 @SuppressWarnings("unused")
 public class SimpleConfigManager
 {
-  private BabelPlugin plugin;
+  private final Announcer plugin;
   
   public SimpleConfigManager(BabelPlugin plugin)
   {

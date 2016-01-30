@@ -13,7 +13,7 @@ import me.thundergemios10.babelplugin.BabelPlugin;
 public class SimpleConfig
 {
   private int comments;
-  private BabelPlugin plugin
+  private BabelPlugin plugin;
   private SimpleConfigManager manager;
   private File file;
   private FileConfiguration config;

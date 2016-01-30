@@ -13,12 +13,12 @@ import me.thundergemios10.babelplugin.BabelPlugin;
 public class SimpleConfig
 {
   private int comments;
-  private BabelPlugin plugin;
   private SimpleConfigManager manager;
   private File file;
   private FileConfiguration config;
   
-  public SimpleConfig(InputStream configStream, File configFile, int comments, BabelPlugin plugin);
+  @SuppressWarnings("deprecation")
+  public SimpleConfig(InputStream configStream, File configFile, int comments, BabelPlugin plugin)
   {
     this.comments = comments;
     this.manager = new SimpleConfigManager(plugin);
@@ -125,7 +125,7 @@ public class SimpleConfig
   public void set(String path, Object value, String[] comment)
   {
     for (String comm : comment) {
-      if (!this.config.contains(path));
+      if (!this.config.contains(path))
       {
         this.config.set(this.manager.getPluginName() + "_COMMENT_" + this.comments, " " + comm);
         this.comments += 1;
@@ -141,7 +141,8 @@ public class SimpleConfig
     reloadConfig();
   }
   
-  public void reloadConfig()
+  @SuppressWarnings("deprecation")
+public void reloadConfig()
   {
     this.config = YamlConfiguration.loadConfiguration(this.manager.getConfigContent(this.file));
   }

@@ -23,10 +23,10 @@ public class EndCommandExecutor
   public boolean onCommand(CommandSender sender, Command cmnd, String string, String[] strings)
   {
     BabelPlugin plugin = BabelPlugin.getPlugin();
-    if (sender.hasPermission("BabelPlugin.End"))
+    if (sender.hasPermission("babelplugin.end"))
     {
       plugin.status = "join";
-      Bukkit.getServer().broadcastMessage(ChatColor.AQUA + "[BabelPlugin] Game ended!!!");
+      Bukkit.getServer().broadcastMessage(ChatColor.AQUA + "[BabelPlugin] Game has ended!!!");
       try
       {
         for (Player player : plugin.playerlist)

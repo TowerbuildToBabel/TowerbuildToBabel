@@ -25,12 +25,12 @@ public class StartCommandExecutor implements CommandExecutor {
 
     @Override
     public boolean onCommand(final CommandSender sender, Command cmnd, String string, String[] strings) {
-        if (sender.hasPermission("BabelPlugin.Start")) {
+        if (sender.hasPermission("babelplugin.start")) {
             BabelPlugin plugin = BabelPlugin.getPlugin();
             plugin.status = "play";
                 
                 int i;
-                Bukkit.getServer().broadcastMessage(ChatColor.AQUA + "[BabelPlugin] Game started!!!");
+                Bukkit.getServer().broadcastMessage(ChatColor.AQUA + "[BabelPlugin] Game has started!");
                 try {
                     for (i = 0; i < plugin.playerlist.size(); i++) {
                         if (i % 2 == 0) {

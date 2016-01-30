@@ -167,15 +167,15 @@
 
       <!-- Resources -->
       <resources>
-          <resource>
-              <targetPath>.</targetPath>
-              <filtering>true</filtering>
-              <directory>${basedir}/src/main/resources/</directory>
-              <includes>
-                  <include>plugin.yml</include>
-                  <include>config.yml</include>
-              </includes>
-          </resource>
+            <resource>
+                <targetPath>.</targetPath>
+                <filtering>true</filtering>
+                <directory>${basedir}/src/main/resources/</directory>
+                <includes>
+                    <include>plugin.yml</include>
+                    <include>config.yml</include>
+                </includes>
+            </resource>
       </resources>
   </build>
 

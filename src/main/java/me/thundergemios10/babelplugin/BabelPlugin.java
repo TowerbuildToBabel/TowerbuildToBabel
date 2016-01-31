@@ -68,7 +68,6 @@ public class BabelPlugin extends JavaPlugin {
     public static final BabelPlugin getPlugin() {
         return instance;
     }
-    Logger log = Bukkit.getLogger();
 
     @Override
     public void onDisable() {

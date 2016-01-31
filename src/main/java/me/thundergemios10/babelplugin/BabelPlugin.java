@@ -1,8 +1,20 @@
 package me.thundergemios10.babelplugin;
 
-import config.ConfigIO;
 import java.io.File;
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.logging.Logger;
+
+import org.bukkit.plugin.java.JavaPlugin;
+import org.bukkit.Bukkit;
+import org.bukkit.ChatColor;
+import org.bukkit.Location;
+import org.bukkit.configuration.file.FileConfiguration;
+import org.bukkit.entity.Player;
+import org.bukkit.plugin.PluginManager;
+
+import config.ConfigIO;
 import me.thundergemios10.babelplugin.events.MercenarySign;
 import me.thundergemios10.babelplugin.events.End;
 import me.thundergemios10.babelplugin.events.BuilderSign;
@@ -15,21 +27,11 @@ import me.thundergemios10.babelplugin.events.SaboteurSign;
 import me.thundergemios10.babelplugin.events.HelmetListener;
 import me.thundergemios10.babelplugin.events.JoinSign;
 import me.thundergemios10.babelplugin.events.ExplodeListener;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.logging.Logger;
 import me.thundergemios10.babelplugin.commands.EndCommandExecutor;
 import me.thundergemios10.babelplugin.commands.StartCommandExecutor;
 import me.thundergemios10.babelplugin.events.ChangeWorld;
 import me.thundergemios10.babelplugin.events.DeathListener;
 import me.thundergemios10.babelplugin.events.PlayerListener;
-import org.bukkit.plugin.java.JavaPlugin;
-import org.bukkit.Bukkit;
-import org.bukkit.ChatColor;
-import org.bukkit.Location;
-import org.bukkit.configuration.file.FileConfiguration;
-import org.bukkit.entity.Player;
-import org.bukkit.plugin.PluginManager;
 
 public class BabelPlugin extends JavaPlugin {
 
@@ -60,6 +62,8 @@ public class BabelPlugin extends JavaPlugin {
     public String status = "join";
     private static BabelPlugin instance;
     ConfigIO io = new ConfigIO(this);
+    public final static Logger log = Logger.getLogger("Minecraft");
+    public final static String logPrefix = "[BabelPlugin] ";
     
     public static final BabelPlugin getPlugin() {
         return instance;
@@ -68,13 +72,13 @@ public class BabelPlugin extends JavaPlugin {
 
     @Override
     public void onDisable() {
-        log.info("[BabelPlugin] Plugin Version " + this.getDescription().getVersion() + " by oSLiD3Ro disabled!");
+        log.info(logPrefix + " Plugin Version " + this.getDescription().getVersion() + " disabled!");
     }
 
     @Override
     public void onEnable() {
         instance = this;
-        log.info("[BabelPlugin] Plugin Version " + this.getDescription().getVersion() + " by oSLiD3Ro enabled!");
+        log.info(logPrefix + " Plugin Version " + this.getDescription().getVersion() + " by enabled!");
 
         String filepath = (System.getProperty("user.dir") + "\\plugins\\BabelPlugin\\config.yml");
         File file = new File(filepath);

@@ -2,7 +2,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>me.thundergemios10.babelplugin</groupId>
   <artifactId>BabelPlugin</artifactId>
-  <version>1.2-SNAPSHOT</version>
+  <version>0.9.3-SNAPSHOT</version>
   <name>BabelPlugin</name>
   <description>A Spigot/Bukkit Minecraft Plugin</description>
 

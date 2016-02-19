@@ -30,27 +30,27 @@ public class StartCommandExecutor implements CommandExecutor {
             plugin.status = "play";
                 
                 int i;
-                Bukkit.getServer().broadcastMessage(ChatColor.AQUA + "[BabelPlugin] Game has started!");
+                Bukkit.getServer().broadcastMessage(BabelPlugin.logPrefix + ChatColor.AQUA + "Game has started!");
                 try {
                     for (i = 0; i < plugin.playerlist.size(); i++) {
                         if (i % 2 == 0) {
                             plugin.playerred.add(plugin.playerlist.get(i));
                             Player player = (Player) plugin.playerlist.get(i);
-                            player.sendMessage(ChatColor.RED + "[BabelPlugin] You were assigned to the red team!");
+                            player.sendMessage(BabelPlugin.logPrefix + ChatColor.RED + "You were assigned to the red team!");
                             player.getWorld().setPVP(true);
                             player.teleport(plugin.spawnred);
                             func.helmet(player);
                         } else {
                             plugin.playerblue.add(plugin.playerlist.get(i));
                             Player player = (Player) plugin.playerlist.get(i);
-                            player.sendMessage(ChatColor.BLUE + "[BabelPlugin] You were assigned to the blue team!");
+                            player.sendMessage(BabelPlugin.logPrefix + ChatColor.BLUE + "You were assigned to the blue team!");
                             player.getWorld().setPVP(true);
                             player.teleport(plugin.spawnblue);
                             func.helmet(player);
                         }
                     }
                  } catch (Exception e) {
-                    Bukkit.getServer().broadcastMessage(ChatColor.AQUA + "[BabelPlugin] Location not found!");   
+                    Bukkit.getServer().broadcastMessage(BabelPlugin.logPrefix + ChatColor.AQUA + "Location not found!");   
                 }
             
             

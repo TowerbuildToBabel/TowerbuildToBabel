@@ -9,14 +9,14 @@ import org.bukkit.entity.Player;
 
 public class ConfigIO
 {
-  private BabelPlugin test;
+  private BabelPlugin plugin;
   public SimpleConfigManager manager;
   public SimpleConfig config;
   public SimpleConfig messages;
   
   public ConfigIO(BabelPlugin plugin)
   {
-    this.test = plugin;
+    this.plugin = plugin;
   }
   
   public void generateLocations(Player player)
@@ -24,19 +24,19 @@ public class ConfigIO
     try
     {
       BabelPlugin plugin = BabelPlugin.getPlugin();
-      FileConfiguration cfg = this.test.getConfig();
+      FileConfiguration cfg = this.plugin.getConfig();
       cfg.options().copyDefaults(true);
-      plugin.spawnblue = new Location(player.getWorld(), this.test.getConfig().getInt("BlueX"), this.test.getConfig().getInt("BlueY"), this.test.getConfig().getInt("BlueZ"));
-      plugin.spawnred = new Location(player.getWorld(), this.test.getConfig().getInt("RedX"), this.test.getConfig().getInt("RedY"), this.test.getConfig().getInt("RedZ"));
-      plugin.lobby = new Location(player.getWorld(), this.test.getConfig().getInt("LobbyX"), this.test.getConfig().getInt("LobbyY"), this.test.getConfig().getInt("LobbyZ"));
-      plugin.end = new Location(player.getWorld(), this.test.getConfig().getInt("EndX"), this.test.getConfig().getInt("EndY"), this.test.getConfig().getInt("EndZ"));
-      plugin.redareabot = new Location(player.getWorld(), this.test.getConfig().getInt("AreaRedBotX"), this.test.getConfig().getInt("AreaRedBotY"), this.test.getConfig().getInt("AreaRedBotZ"));
-      plugin.redareatop = new Location(player.getWorld(), this.test.getConfig().getInt("AreaRedTopX"), this.test.getConfig().getInt("AreaRedTopY"), this.test.getConfig().getInt("AreaRedTopZ"));
-      plugin.blueareatop = new Location(player.getWorld(), this.test.getConfig().getInt("AreaBlueTopX"), this.test.getConfig().getInt("AreaBlueTopY"), this.test.getConfig().getInt("AreaBlueTopZ"));
-      plugin.blueareabot = new Location(player.getWorld(), this.test.getConfig().getInt("AreaBlueBotX"), this.test.getConfig().getInt("AreaBlueBotY"), this.test.getConfig().getInt("AreaBlueBotZ"));
-      plugin.firework = new Location(player.getWorld(), this.test.getConfig().getInt("FireX"), this.test.getConfig().getInt("FireY"), this.test.getConfig().getInt("FireZ"));
-      plugin.redbutton = new Location(player.getWorld(), this.test.getConfig().getInt("RedButtonX"), this.test.getConfig().getInt("RedButtonY"), this.test.getConfig().getInt("RedButtonZ"));
-      plugin.bluebutton = new Location(player.getWorld(), this.test.getConfig().getInt("BlueButtonX"), this.test.getConfig().getInt("BlueButtonY"), this.test.getConfig().getInt("BlueButtonZ"));
+      plugin.spawnblue = new Location(player.getWorld(), this.plugin.getConfig().getInt("BlueX"), this.plugin.getConfig().getInt("BlueY"), this.plugin.getConfig().getInt("BlueZ"));
+      plugin.spawnred = new Location(player.getWorld(), this.plugin.getConfig().getInt("RedX"), this.plugin.getConfig().getInt("RedY"), this.plugin.getConfig().getInt("RedZ"));
+      plugin.lobby = new Location(player.getWorld(), this.plugin.getConfig().getInt("LobbyX"), this.plugin.getConfig().getInt("LobbyY"), this.plugin.getConfig().getInt("LobbyZ"));
+      plugin.end = new Location(player.getWorld(), this.plugin.getConfig().getInt("EndX"), this.plugin.getConfig().getInt("EndY"), this.plugin.getConfig().getInt("EndZ"));
+      plugin.redareabot = new Location(player.getWorld(), this.plugin.getConfig().getInt("AreaRedBotX"), this.plugin.getConfig().getInt("AreaRedBotY"), this.plugin.getConfig().getInt("AreaRedBotZ"));
+      plugin.redareatop = new Location(player.getWorld(), this.plugin.getConfig().getInt("AreaRedTopX"), this.plugin.getConfig().getInt("AreaRedTopY"), this.plugin.getConfig().getInt("AreaRedTopZ"));
+      plugin.blueareatop = new Location(player.getWorld(), this.plugin.getConfig().getInt("AreaBlueTopX"), this.plugin.getConfig().getInt("AreaBlueTopY"), this.plugin.getConfig().getInt("AreaBlueTopZ"));
+      plugin.blueareabot = new Location(player.getWorld(), this.plugin.getConfig().getInt("AreaBlueBotX"), this.plugin.getConfig().getInt("AreaBlueBotY"), this.plugin.getConfig().getInt("AreaBlueBotZ"));
+      plugin.firework = new Location(player.getWorld(), this.plugin.getConfig().getInt("FireX"), this.plugin.getConfig().getInt("FireY"), this.plugin.getConfig().getInt("FireZ"));
+      plugin.redbutton = new Location(player.getWorld(), this.plugin.getConfig().getInt("RedButtonX"), this.plugin.getConfig().getInt("RedButtonY"), this.plugin.getConfig().getInt("RedButtonZ"));
+      plugin.bluebutton = new Location(player.getWorld(), this.plugin.getConfig().getInt("BlueButtonX"), this.plugin.getConfig().getInt("BlueButtonY"), this.plugin.getConfig().getInt("BlueButtonZ"));
     }
     catch (Exception e)
     {
@@ -46,7 +46,7 @@ public class ConfigIO
   
   public void createConfig()
   {
-    this.manager = new SimpleConfigManager(this.test);
+    this.manager = new SimpleConfigManager(this.plugin);
     
     String[] header = { "Configuration File of", "BabelPlugin" };
     String[] comment1 = { "----------------------------------------", "Spawn of the blue team" };

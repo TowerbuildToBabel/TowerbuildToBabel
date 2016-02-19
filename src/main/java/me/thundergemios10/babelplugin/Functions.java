@@ -31,13 +31,13 @@ public class Functions {
         for (i = 0; i < plugin.playerlist.size(); i++) {
             Player test = (Player) plugin.playerlist.get(i);
             if (sender.getName().equals(test.getName())) {
-                sender.sendMessage(ChatColor.AQUA + "[BabelPlugin] You already joined the game!");
+                sender.sendMessage(BabelPlugin.logPrefix + ChatColor.AQUA + "You already joined the game!");
                 newplayer = false;
             }
         }
         if (newplayer != false) {
             plugin.playerlist.add(sender);
-            sender.sendMessage(ChatColor.AQUA + "[BabelPlugin] You joined the game!");
+            sender.sendMessage(BabelPlugin.logPrefix + ChatColor.AQUA + "You joined the game!");
         }
 
     }

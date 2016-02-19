@@ -15,9 +15,7 @@ import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.PlayerInventory;
 
-public class EndCommandExecutor
-  implements CommandExecutor
-{
+public class EndCommandExecutor implements CommandExecutor {
   Functions func = new Functions();
   
   public boolean onCommand(CommandSender sender, Command cmnd, String string, String[] strings)
@@ -26,7 +24,7 @@ public class EndCommandExecutor
     if (sender.hasPermission("babelplugin.end"))
     {
       plugin.status = "join";
-      Bukkit.getServer().broadcastMessage(ChatColor.AQUA + "[BabelPlugin] Game has ended!!!");
+      Bukkit.getServer().broadcastMessage(BabelPlugin.logPrefix + ChatColor.AQUA + "Game has ended!!!");
       try
       {
         for (Player player : plugin.playerlist)
@@ -52,7 +50,7 @@ public class EndCommandExecutor
       }
       catch (Exception e)
       {
-        Bukkit.getServer().broadcastMessage(ChatColor.AQUA + "[BabelPlugin] Location not found!");
+        Bukkit.getServer().broadcastMessage(BabelPlugin.logPrefix + ChatColor.AQUA + "Location not found!");
       }
     }
     return true;

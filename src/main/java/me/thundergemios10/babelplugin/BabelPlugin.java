@@ -83,9 +83,9 @@ public class BabelPlugin extends JavaPlugin {
         File file = new File(filepath);
 
         if (file.exists()) {
-            log.info("[BabelPlugin] Config.yml exists!");
+            log.info(logPrefix + "Config.yml exists!");
         } else {
-            log.info("[BabelPlugin] Config.yml does not exists!");
+            log.info(logPrefix + "Config.yml does not exists!");
             io.createConfig();
         }
 
@@ -113,7 +113,7 @@ public class BabelPlugin extends JavaPlugin {
             Metrics metrics = new Metrics(this);
             metrics.start();
         } catch (IOException e) {
-            log.info("[BabelPlugin] Loading Metrics failed!");
+            log.info(logPrefix + "Loading Metrics failed!");
         }
     }
 }

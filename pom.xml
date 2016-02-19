@@ -66,7 +66,7 @@
                   </execution>
               </executions>
               <configuration>
-                  <file>/src/main/java/resources/plugin.yml</file>
+                  <file>/src/main/resources/plugin.yml</file>
                   <replacements>
                       <replacement>
                           <token>version-number-unknown</token>

@@ -72,13 +72,13 @@ public class BabelPlugin extends JavaPlugin {
 
     @Override
     public void onDisable() {
-        log.info(logPrefix + " Plugin Version " + this.getDescription().getVersion() + " disabled!");
+        log.info(logPrefix + "Plugin Version " + this.getDescription().getVersion() + " disabled!");
     }
 
     @Override
     public void onEnable() {
         instance = this;
-        log.info(logPrefix + " Plugin Version " + this.getDescription().getVersion() + " by enabled!");
+        log.info(logPrefix + "Plugin Version " + this.getDescription().getVersion() + " by enabled!");
 
         String filepath = (System.getProperty("user.dir") + "\\plugins\\BabelPlugin\\config.yml");
         File file = new File(filepath);

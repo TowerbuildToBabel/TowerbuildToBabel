@@ -64,6 +64,7 @@ public class BabelPlugin extends JavaPlugin {
     ConfigIO io = new ConfigIO(this);
     public final static Logger log = Logger.getLogger("Minecraft");
     public final static String logPrefix = "[BabelPlugin] ";
+    public final static String msgPrefix = "&b[BabelPlugin] ";
     
     public static final BabelPlugin getPlugin() {
         return instance;

@@ -1,0 +1,5 @@
+ permissoins:
+   BabelPlugin.Start:
+     description: Starts the Game
+   BabelPlugin.End:
+     description: Ends the Game

@@ -150,7 +150,7 @@
                     <relocations>
                         <relocation>
                             <pattern>org.mcstats</pattern>
-                            <shadedPattern>me.thundergemios10.motdmanager</shadedPattern>
+                            <shadedPattern>me.thundergemios10.babelplugin</shadedPattern>
                         </relocation>
                     </relocations>
                 </configuration>
@@ -213,20 +213,20 @@
     <dependency>
            <groupId>org.spigotmc</groupId>
            <artifactId>spigot-api</artifactId>
-           <version>1.8.8-R0.1-SNAPSHOT</version>
+           <version>1.9-R0.1-SNAPSHOT</version>
            <scope>provided</scope>
     </dependency>
     <!--Bukkit API-->
     <dependency>
             <groupId>org.bukkit</groupId>
             <artifactId>bukkit</artifactId>
-            <version>1.8.8-R0.1-SNAPSHOT</version>
+            <version>1.9-R0.1-SNAPSHOT</version>
             <scope>provided</scope>
     </dependency>
     <dependency>
             <groupId>org.mcstats.bukkit</groupId>
             <artifactId>metrics</artifactId>
-            <version>R7</version>
+            <version>R8-SNAPSHOT</version>
             <scope>compile</scope>
     </dependency>
   </dependencies>
